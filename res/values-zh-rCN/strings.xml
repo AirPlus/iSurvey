@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome">欢迎来到 iSurvey</string>
+    <string name="account">账号</string>
+    <string name="password">密码</string>
+    <string name="login">安全登录</string>
+    <string name="register">还没加入 iSurvey？立即注册！</string>
+    <string name="forget_password">忘记密码？</string>
+</resources>
