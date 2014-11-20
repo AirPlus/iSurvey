@@ -2,11 +2,13 @@ package com.benber.isurvey;
 
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.animation.Animation;
@@ -57,8 +59,8 @@ public class LaunchActivity extends ActionBarActivity {
 		return super.onKeyDown(keyCode, event);
 	}
 
-	public static class LoginFragment extends Fragment {
-
+	public static class LoginFragment extends Fragment implements
+			OnClickListener {
 		public LoginFragment() {
 		}
 
@@ -67,7 +69,22 @@ public class LaunchActivity extends ActionBarActivity {
 				Bundle savedInstanceState) {
 			View rootView = inflater.inflate(R.layout.fragment_login,
 					container, false);
+			rootView.findViewById(R.id.btnLogin).setOnClickListener(this);
 			return rootView;
+		}
+
+		@Override
+		public void onClick(View v) {
+			switch (v.getId()) {
+			case R.id.btnLogin:
+				LaunchActivity parent = (LaunchActivity) getActivity();
+				Intent intent = new Intent(parent, MainActivity.class);
+				startActivity(intent);
+				parent.overridePendingTransition(android.R.anim.fade_in,
+						android.R.anim.fade_out);
+				parent.finish();
+				break;
+			}
 		}
 	}
 
