@@ -13,9 +13,9 @@
     <string name="forget_password">Forgot your password?</string>
     
     <string name="title_activity_main">MainActivity</string>
-    <string name="drawer_surveys">Surveys</string>
-    <string name="drawer_uc">User Center</string>
-    <string name="drawer_">Section 3</string>
+    <string name="drawer_survey_list">Survey list</string>
+    <string name="drawer_post">Post a survey</string>
+    <string name="drawer_user_center">User center</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
