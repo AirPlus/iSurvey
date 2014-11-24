@@ -12,6 +12,7 @@ public class SurveyOverview {
 	private Date expire;
 	private String title;
 	private String desc;
+	private int responds;
 	private int time;
 
 	public SurveyOverview() {
@@ -32,6 +33,38 @@ public class SurveyOverview {
 		this.expire = expire;
 		this.title = title;
 		this.desc = desc;
+		this.time = time;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setType(int type) {
+		this.type = type;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public void setExpire(Date expire) {
+		this.expire = expire;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+
+	public void setResponds(int responds) {
+		this.responds = responds;
+	}
+
+	public void setTime(int time) {
 		this.time = time;
 	}
 
@@ -60,7 +93,9 @@ public class SurveyOverview {
 	public String getDesc() {
 		return desc;
 	}
-
+	public int getResponds() {
+		return responds;
+	}
 	public int getTime() {
 		return time;
 	}

@@ -4,7 +4,7 @@
     <string name="app_name">iSurvey</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_login">LoginActivity</string>
+    
     <string name="welcome">Welcome to iSurvey</string>
     <string name="account">Account</string>
     <string name="password">Password</string>
@@ -12,12 +12,14 @@
     <string name="register">New to iSurvey? Sign up now!</string>
     <string name="forget_password">Forgot your password?</string>
     
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">iSurvey</string>
     <string name="drawer_survey_list">Survey list</string>
     <string name="drawer_post">Post a survey</string>
     <string name="drawer_user_center">User center</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
+    
+    <string name="title_activity_respond">Survey details</string>
 
 </resources>

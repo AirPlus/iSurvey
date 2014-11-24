@@ -38,30 +38,36 @@ public class SurveyListFragment extends Fragment {
 		for (i = 1; i <= 10; i++) {
 			listItem = new HashMap<String, String>();
 			listItem.put("title", "Test survey " + i);
-			listItem.put("detail",
+			listItem.put("desc",
 					"This is just a simple survey posted. It's just for testing the app.");
 			listData.add(listItem);
-			listSurveyOverview.add(new SurveyOverview());
+			SurveyOverview mSurveyOverview =new SurveyOverview();
+			mSurveyOverview.setTitle("Test survey " + i);
+			mSurveyOverview.setDesc("This is just a simple survey posted. It's just for testing the app.");
+			listSurveyOverview.add(mSurveyOverview);
 
 		}
 		listAdapter = new SimpleAdapter(getActivity(), listData,
-				R.layout.item_survey, new String[] { "title", "detail" },
-				new int[] { R.id.textTitle, R.id.textDetail });
+				R.layout.item_survey, new String[] { "title", "desc" },
+				new int[] { R.id.textTitle, R.id.textDesc });
 		listView.setAdapter(listAdapter);
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				Intent intent = new Intent(getActivity(), MainActivity.class);
+				Intent intent = new Intent(getActivity(), RespondActivity.class);
 				SurveyOverview mSurveyOverview = listSurveyOverview
 						.get(position);
-				intent.putExtra("id", mSurveyOverview.getId());
-				intent.putExtra("type", mSurveyOverview.getType());
-				intent.putExtra("date", mSurveyOverview.getDate());
-				intent.putExtra("expire", mSurveyOverview.getExpire());
-				intent.putExtra("title", mSurveyOverview.getTitle());
-				intent.putExtra("desc", mSurveyOverview.getDesc());
-				intent.putExtra("time", mSurveyOverview.getTime());
+				Bundle mBundle = new Bundle();
+				mBundle.putInt("id", mSurveyOverview.getId());
+				mBundle.putInt("type", mSurveyOverview.getType());
+				mBundle.putString("date", mSurveyOverview.getDate());
+				mBundle.putString("expire", mSurveyOverview.getExpire());
+				mBundle.putString("title", mSurveyOverview.getTitle());
+				mBundle.putString("desc", mSurveyOverview.getDesc());
+				mBundle.putInt("responds", mSurveyOverview.getResponds());
+				mBundle.putInt("time", mSurveyOverview.getTime());
+				intent.putExtra("para", mBundle);
 				startActivity(intent);
 			}
 		});

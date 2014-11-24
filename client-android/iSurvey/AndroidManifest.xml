@@ -30,6 +30,10 @@
             android:name="com.benber.isurvey.MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
+        <activity
+            android:name="com.benber.isurvey.RespondActivity"
+            android:label="@string/title_activity_respond" >
+        </activity>
     </application>
 
 </manifest>
