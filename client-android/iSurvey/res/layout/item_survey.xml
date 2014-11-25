@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
-    android:orientation="vertical"
-    android:padding="10dp"
     android:background="@drawable/item_survey" >
+
+    <ImageView
+        android:id="@+id/imageListIcon"
+        android:layout_width="64dp"
+        android:layout_height="96dp"
+        android:layout_alignBottom="@+id/textDesc"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/item_survey_icon"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/survey_list_icon_1" />
 
     <TextView
         android:id="@+id/textTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageListIcon"
+        android:paddingBottom="2dp"
+        android:paddingRight="10dp"
+        android:paddingTop="8dp"
         android:text="@string/hello_world"
         android:textColor="#1590EA"
         android:textSize="18sp" />
@@ -20,8 +35,13 @@
         android:id="@+id/textDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textTitle"
+        android:layout_toRightOf="@+id/imageListIcon"
+        android:ellipsize="end"
+        android:paddingBottom="12dp"
+        android:paddingRight="10dp"
         android:text="@string/hello_world"
         android:textColor="#888"
         android:textSize="14sp" />
 
-</LinearLayout>
+</RelativeLayout>
